@@ -1,1 +1,22 @@
-<p>bus-lines works!</p>
+<h2>Bus Lines</h2>
+
+<table>
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Start Bus Stop</th>
+        <th>End Bus Stop</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let busLine of busLines" [class.return-line]="busLine.isReturnLine" >
+        <td>
+            <ng-container *ngIf="!busLine.isReturnLine">
+                {{ busLine.lineNumber }}
+            </ng-container>
+        </td>
+        <td>{{ busLine.startBusStop.cityDistrictName }} {{ busLine.startBusStop.stopName }}</td>
+        <td>{{ busLine.endBusStop.cityDistrictName }} {{ busLine.endBusStop.stopName }}</td>
+      </tr>
+    </tbody>
+  </table>
