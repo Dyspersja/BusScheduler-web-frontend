@@ -21,13 +21,6 @@ export class BusLinesComponent implements OnInit {
 
   getBusLines(): void {
     this.busLineService.getBusLines()
-      .subscribe(
-        (busLines: BusLine[]) => {
-          this.busLines = busLines;
-        },
-        error => {
-          console.error('Error fetching bus lines', error);
-        }
-      );
+      .subscribe( busLines => this.busLines = busLines);
   }
 }
