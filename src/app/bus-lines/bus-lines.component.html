@@ -9,7 +9,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let busLine of busLines" [class.return-line]="busLine.isReturnLine" >
+      <tr 
+        *ngFor="let busLine of busLines" 
+        [class.return-line]="busLine.isReturnLine"
+        [routerLink]="['/bus_stops', busLine.lineNumber, { r: busLine.isReturnLine ? true : false }]"
+      >
         <td>
             <ng-container *ngIf="!busLine.isReturnLine">
                 {{ busLine.lineNumber }}
