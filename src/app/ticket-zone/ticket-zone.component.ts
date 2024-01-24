@@ -23,4 +23,13 @@ export class TicketZoneComponent implements OnInit {
     this.ticketZoneService.getTicketZones()
       .subscribe( ticketZones => this.ticketZones = ticketZones);
   }
+
+  addTicketZone(zoneName: string): void {
+    zoneName = zoneName.trim();
+    if (!zoneName) { return; }
+    this.ticketZoneService.addTicketZone({ zoneName } as TicketZone)
+      .subscribe(ticketZone => {
+        this.ticketZones.push(ticketZone);
+      });
+  }
 }
