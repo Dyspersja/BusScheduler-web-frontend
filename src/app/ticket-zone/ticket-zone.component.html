@@ -1,3 +1,11 @@
+<div class="container">
+    <label>New Ticket Zone: </label>
+    <input #zoneName />
+    <button type="button" class="add-button" (click)="addTicketZone(zoneName.value); zoneName.value=''">
+      Add Ticket Zone
+    </button>
+</div>
+
 <ul>
     <li *ngFor="let ticketZone of ticketZones; let i = index">
         <span class="number">{{ i + 1 }}.</span>
