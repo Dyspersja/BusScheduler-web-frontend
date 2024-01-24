@@ -11,5 +11,5 @@ import { BusLinesComponent } from './bus-lines/bus-lines.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'busscheduler';
+  title = 'BusScheduler';
 }
