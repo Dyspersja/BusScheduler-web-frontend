@@ -15,4 +15,8 @@ export class TicketZoneService {
   getTicketZones(): Observable<TicketZone[]> {
     return this.http.get<TicketZone[]>(this.apiUrl);
   }
+
+  addTicketZone(ticketZone: TicketZone): Observable<TicketZone> {
+    return this.http.post<TicketZone>(this.apiUrl, ticketZone);
+  }
 }
