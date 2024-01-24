@@ -1,0 +1,15 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold;
+  }
+  
+  nav:hover {
+      background-color: #b61e32;
+      cursor: pointer;
+  }
