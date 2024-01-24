@@ -1,6 +1,9 @@
 <h2>Bus Stops For Line {{ busLineNumber }} {{ isReturnLine ? '- return Line' : '' }}</h2>
 <ul>
-    <li *ngFor="let busStop of busStops; let i = index">
+    <li 
+    *ngFor="let busStop of busStops; let i = index"
+    [routerLink]="['/timetable', busLineNumber, { r: isReturnLine ? true : false, stop: busStop.id }]"
+    >
         <span class="number">{{ i + 1 }}.</span>
         {{ busStop.cityDistrictName }} - {{ busStop.stopName }}
     </li> 
