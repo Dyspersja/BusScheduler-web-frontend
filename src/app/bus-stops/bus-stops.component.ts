@@ -2,12 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { BusStop } from '../bus-stop';
 import { BusStopService } from '../bus-stop.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-bus-stops',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [RouterLink, NgFor, NgIf],
   templateUrl: './bus-stops.component.html',
   styleUrl: './bus-stops.component.css'
 })

@@ -1,0 +1,41 @@
+
+<nav [routerLink]="['/bus_stops', busLineNumber, { r: isReturnLine ? true : false }]">
+  <a>
+    Go back to line {{ busLineNumber}} bus stops
+  </a>
+</nav>
+
+<table>
+    <thead>
+      <tr>
+        <th>Weekdays</th>
+        <th>Saturdays</th>
+        <th>Sundays</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+            <ul>
+                <li *ngFor="let time of timetable?.weekdays">
+                  {{ time }}
+                </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li *ngFor="let time of timetable?.saturdays">
+                  {{ time }}
+                </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li *ngFor="let time of timetable?.sundays">
+                  {{ time }}
+                </li>
+            </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
