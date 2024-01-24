@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { BusLine } from '../bus-line';
 import { BusLineService } from '../bus-line.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-bus-lines',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [RouterLink, NgFor, NgIf],
   templateUrl: './bus-lines.component.html',
   styleUrl: './bus-lines.component.css'
 })
